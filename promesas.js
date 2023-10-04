@@ -3,7 +3,8 @@ const datos = [1, 2, 3, 4, 5, 6]
 const myPromise = new Promise(
     (resolve, reject) => {
         setTimeout(() => {
-            resolve(datos);
+            //resolve(datos);
+            reject('No se pudo :');
         })
     }
 )
@@ -18,3 +19,4 @@ myPromise.then((data) => {
 })
 
 console.log('El codigo continua');
+
