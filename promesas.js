@@ -4,19 +4,18 @@ const myPromise = new Promise(
     (resolve, reject) => {
         setTimeout(() => {
             //resolve(datos);
-            reject('No se pudo :');
-        })
+            reject('No se pudo');
+        }, 3000);
     }
-)
+);
 
 console.log(myPromise);
 
-console.log('Inicia promesa');
+console.log('Inicia Promesa');
 
 myPromise.then((data) => {
     console.log(data);
-    console.log('Finaliza promesa');
-})
+    console.log('Finaliza la Promesa');
+}).catch(error => console.log(error));
 
-console.log('El codigo continua');
-
+console.log('EL código continia')
