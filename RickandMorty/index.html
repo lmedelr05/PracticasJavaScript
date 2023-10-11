@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricky Martin API</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <Style>
+    <style>
         .characters {
             display: flex;
             flex-direction: row;
@@ -16,23 +16,25 @@
             overflow: scroll;
         }
         .card {
-  background-color: #0e0101; /* Cambia el color de fondo de las tarjetas */
-  color: #df1010; /* Cambia el color del texto en las tarjetas */
-  border: 2px solid #a83737; /* Cambia el color del borde de las tarjetas */
+            background-color: #0e0101;
+            color: #df1010;
+            border: 2px solid #ac1f1f;
+        }
+        @keyframes colorChange {
+            0% { color: red; }
+            20% { color: blue; }
+            40% { color: green; }
+            60% { color: orange; }  
+            80% { color: purple; }
+            100% { color: pink; }
+        }
+        h1 {
+            animation: colorChange 5s infinite;
+        }
+        .custom-bg-color {
+  background-color: #0e0101;
 }
-@keyframes colorChange {
-    0% { color: red; }
-      20% { color: blue; }
-      40% { color: green; }
-      60% { color: orange; }
-      80% { color: purple; }
-      100% { color: pink; }
-    }
-
-    h1 {
-      animation: colorChange 5s infinite;
-    }
-    </Style>
+    </style>
 </head>
 <body class="bg-dark">
     <div class="container mt-3 text-center text-white">
@@ -41,11 +43,31 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination">
             </ul>
-          </nav>
+        </nav>
         <hr>
         <div class="characters"></div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-them="dark">
+        <div class="modal-dialog modal-dialog-lg modal-dialog-centered">
+            <div class="modal-content text-white">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js"> type="module"</script>
 </body>
 </html>
