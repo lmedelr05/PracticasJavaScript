@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación API de Clima</title>
+    <style>
+        body  {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100wh;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: black;
+        }
+        .container {
+            width: 500px;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .container div {
+            width: 45%;
+        }
+        h1, h2, h3{
+            animation: cambiaColor 1s infinite alternate; 
+          }
+          
+          @keyframes cambiaColor {
+            0% {
+              color: white; 
+            }
+            50% {
+              color: gray;
+            }
+            100% {
+              color: black; 
+            }
+          }
+          #right input{
+            width: 80%;
+            background: none;
+            padding: 15px;
+            border: none;
+            border-bottom: 1px solid black;
+            margin: 20px;
+          } 
+          
+          #rigth button{
+            width: 50%;
+            border: none;
+            background-color: blueviolet;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="left">
+        <h1>Clima Actual</h1>
+            <hr>
+            <h2>Ciudad</h2>
+            <h3>18°C</h3>
+        </div>
+        <div id="rigt">
+            <h1>Busca el cime de tu ciudad</h1>
+            <hr>
+            <input type="tel"  name="city" id="city"><br>
+            <button id="btnBuscar">Buscar </button>
+        </div>
+    </div>
+    <script src="./api.js"></script>
+</body>
+</html>
