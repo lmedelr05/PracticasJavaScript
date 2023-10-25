@@ -1,10 +1,10 @@
-const canvas = document.getElementById("canva");
-const ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("canva");
+    const ctx = canvas.getContext("2d");
 
-let direction = 1;
+    let direction = 1;
 
-let posX = 0;
-let posY = 1;
+    let posX = 0;
+    let posY = 1;
 
 function ghost(x, y){
     ctx.font = '40px Serif';
